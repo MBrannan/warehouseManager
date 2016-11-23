@@ -112,7 +112,16 @@ SELECT warehouse, fulfillment_days
 FROM warehouse;
 
 SELECT first_name, last_name
-FROM customers;
+FROM customers
+JOIN ;
+
+SELECT count(customers.first_name), first_name, last_name
+FROM customers
+JOIN addresses
+ON addresses.customer_id = customers.id
+JOIN orders
+ON orders.address_id = addresses.id
+GROUP BY customers.id;
 
 SELECT *
 FROM orders

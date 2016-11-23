@@ -12,7 +12,7 @@ router.get('/', function(req, res) {
         res.sendStatus(500);
     }
 
-    client.query('SELECT first_name, last_name FROM customers', function(err, result) {
+    client.query('SELECT count(customers.first_name), first_name, last_name FROM customers JOIN addresses ON addresses.customer_id = customers.id JOIN orders ON orders.address_id = addresses.id GROUP BY customers.id;', function(err, result) {
       done();
 
       if(err) {
