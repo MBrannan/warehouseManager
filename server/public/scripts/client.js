@@ -42,12 +42,20 @@ app.controller('CustomersController', function() {
 
 });
 
-app.controller('OrdersController', function() {
+app.controller('OrdersController', ["$http", function($http) {
   console.log('Orders controller running');
   var self = this;
-  self.message = "Orders controller is the best!";
+  self.orders = [];
+  getOrders();
 
-});
+  function getOrders() {
+    $http.get('/orders')
+      .then(function(response) {
+        console.log(response.data);
+        self.orders = response.data;
+      });
+  }
+}]);
 
 app.controller('WarehouseController', function() {
   console.log('Warehouse controller running');
