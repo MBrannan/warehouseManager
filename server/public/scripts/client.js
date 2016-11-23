@@ -35,12 +35,23 @@ app.controller('HomeController', function() {
 
 });
 
-app.controller('CustomersController', function() {
+app.controller('CustomersController',["$http", function($http) {
   console.log('Customers controller running');
   var self = this;
+  self.customers = [];
   self.message = "Customers controller is the best!";
 
-});
+  getCustomers();
+
+  function getCustomers() {
+    $http.get('/customers')
+      .then(function(response) {
+        console.log(response.data);
+        self.customers = response.data;
+      });
+  }
+
+}]);
 
 app.controller('OrdersController', ["$http", function($http) {
   console.log('Orders controller running');
