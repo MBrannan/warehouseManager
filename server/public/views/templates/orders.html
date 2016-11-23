@@ -1,14 +1,63 @@
-<div class="orders" ng-repeat="orders in OrdersController.orders">
-  <input type="number" name="address_id" class="form-control" ng-model="orders.address_id">
-  <input type="text" name="address_type" class="form-control" ng-model="orders.address_type">
-  <input type="text" name="city" class="form-control" ng-model="orders.city">
-  <input type="number" name="customer_id" class="form-control" ng-model="orders.customer_id">
-  <input type="text" name="first_name" class="form-control" ng-model="orders.first_name">
-  <input type="number" name="id" class="form-control" ng-model="orders.id">
-  <input type="text" name="last_name" class="form-control" ng-model="orders.last_name">
-  <input type="text" name="order_date" class="form-control" ng-model="orders.order_date">
-  <input type="text" name="state" class="form-control" ng-model="orders.state">
-  <input type="text" name="street" class="form-control" ng-model="orders.street">
-  <input type="text" name="total" class="form-control" ng-model="orders.total">
-  <input type="text" name="zip" class="form-control" ng-model="orders.zip">
-</div>
+< >
+
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th>
+        Address ID
+      </th>
+      <th>
+        Address Type
+      </th>
+      <th>
+        City
+      </th>
+      <th>
+        Customer ID
+      </th>
+      <th>
+        First Name
+      </th>
+      <th>
+        ID
+      </th>
+      <th>
+        Last Name
+      </th>
+      <th>
+        Order Date
+      </th>
+      <th>
+        State
+      </th>
+      <th>
+        Street
+      </th>
+      <th>
+        Total
+      </th>
+      <th>
+        Zip Code
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="order" ng-repeat="order in orders.orders">
+      <td><input type="number" name="address_id" class="form-control col-md-1" ng-model="order.address_id"/></td>
+      <td><input type="text" name="address_type" class="form-control col-md-1" ng-model="order.address_type"/></td>
+      <td><input type="text" name="city" class="form-control col-md-1" ng-model="order.city"/></td>
+      <td><input type="number" name="customer_id" class="form-control col-md-1" ng-model="order.customer_id"/></td>
+      <td><input type="text" name="first_name" class="form-control col-md-1" ng-model="order.first_name"/></td>
+      <td><input type="number" name="id" class="form-control col-md-1" ng-model="order.id"/></td>
+      <td><input type="text" name="last_name" class="form-control col-md-1" ng-model="order.last_name"/></td>
+      <td><input type="text" name="order_date" class="form-control col-md-1" ng-model="order.order_date"/></td>
+      <td><input type="text" name="state" class="form-control col-md-1" ng-model="order.state"/></td>
+      <td><input type="text" name="street" class="form-control col-md-1" ng-model="order.street"/></td>
+      <td><input type="text" name="total" class="form-control col-md-1" ng-model="order.total"/></td>
+      <td><input type="text" name="zip" class="form-control col-md-1" ng-model="order.zip"/></td>
+    </tr>
+  </tbody>
+</table>
