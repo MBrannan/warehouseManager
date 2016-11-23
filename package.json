@@ -1,0 +1,23 @@
+{
+  "name": "warehousemanager",
+  "version": "1.0.0",
+  "description": "full stack angular development",
+  "main": "app.js",
+  "scripts": {
+    "start": "node server/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mike joe andrew f",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.8",
+     "body-parser": "^1.15.2",
+     "express": "^4.14.0",
+     "jquery": "^3.1.1",
+     "pg": "^6.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MBrannan/warehouseManager/"
+  }
+}
