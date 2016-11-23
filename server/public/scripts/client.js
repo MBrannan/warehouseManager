@@ -57,9 +57,19 @@ app.controller('OrdersController', ["$http", function($http) {
   }
 }]);
 
-app.controller('WarehouseController', function() {
+app.controller('WarehouseController', ["$http", function($http) {
   console.log('Warehouse controller running');
   var self = this;
   self.message = "Warehouse controller is the best!";
 
-});
+  getWarehouse();
+
+  function getWarehouse() {
+    $http.get('/warehouse')
+      .then(function(response) {
+        console.log('response data: ', response.data);
+        self.warehouse = response.data;
+      });
+  }
+
+}]);
