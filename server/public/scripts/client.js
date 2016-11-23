@@ -71,6 +71,7 @@ app.controller('OrdersController', ["$http", function($http) {
 app.controller('WarehouseController', ["$http", function($http) {
   console.log('Warehouse controller running');
   var self = this;
+  self.warehouses = [];
   self.message = "Warehouse controller is the best!";
 
   getWarehouse();
@@ -79,7 +80,7 @@ app.controller('WarehouseController', ["$http", function($http) {
     $http.get('/warehouse')
       .then(function(response) {
         console.log('response data: ', response.data);
-        self.warehouse = response.data;
+        self.warehouses = response.data;
       });
   }
 
