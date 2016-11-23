@@ -3,7 +3,6 @@ var router = express.Router();
 var pg = require('pg');
 var connectionString = 'postgres://localhost:5432/sigma';
 
-<<<<<<< HEAD
 router.get('/', function(req, res) {
   console.log('get request');
 
@@ -49,8 +48,5 @@ router.post('/', function(req, res) {
       });
   });
 });
-=======
-console.log("customers linked");
->>>>>>> master
 
 module.exports = router;
